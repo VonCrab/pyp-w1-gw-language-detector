@@ -19,7 +19,7 @@ def count_words(common_words, text):
     i = 0
     for word in text.split():
             
-        word = word.lower()
+        word = word.lower().strip("?!(),.:;\n")
             
         if word in common_words:
             i += 1
