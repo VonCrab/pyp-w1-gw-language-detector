@@ -82,6 +82,7 @@ celerybeat-schedule
 venv/
 ENV/
 group_project/
+rmotr_group_project/
 
 # Spyder project settings
 .spyderproject

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """This is the entry point of the program."""
 
 from .languages import LANGUAGES
@@ -13,12 +14,14 @@ def detect_language(text, languages=LANGUAGES):
         
         for word in text.split():
             
+            word = word.lower()
+            
             if word in language['common_words']:
                 i += 1
+                
         counters.append(i)
   
     # finds the index of the largest word count
     word_count_index = counters.index(max(counters))
 
     return languages[word_count_index]['name']
-    
