@@ -17,6 +17,8 @@ def detect_language(text, languages=LANGUAGES):
                 i += 1
         counters.append(i)
   
+    # finds the index of the largest word count
     word_count_index = counters.index(max(counters))
 
     return languages[word_count_index]['name']
+    
